@@ -4,8 +4,6 @@
 
 This part of the tutorial has a fairly limited scope. After finishing the tutorial you've got everything you need to use the CDK. In particular, you've installed the tools you need, and you'll know how to create a VPC.
 
-
-
 ## Kudos to Codecentric's Maik Kingma (aka foreign feathers)
 This part of the tutorial is inspired by <a href="https://blog.codecentric.de/en/2019/09/aws-cdk-create-custom-vpc/">Maik Kingma's article series on using the CDK</a>. I expect the next part of this series to be my own work, but there are few ways to get started, so I'll happily point you to the original.
 
@@ -55,8 +53,6 @@ npm i @aws-cdk/aws-ec2@1.64.0 --save
 
  * `cdk destroy <name of the stack`      destroy and removes this stack from your default AWS account. If your app has a single stack, there is no need to specify the stack name
  * `cdk list`        list the stack you've currently deployed
- * `npm run build`   compile typescript to js
- * `npm run watch`   watch for changes and compile
  * `npm run test`    perform the jest unit tests
  * `cdk deploy`      deploy this stack to your default AWS account/region
  * `cdk diff`        compare deployed stack with current state

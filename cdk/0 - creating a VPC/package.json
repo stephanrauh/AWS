@@ -5,8 +5,6 @@
     "sample_cdk": "bin/sample_cdk.js"
   },
   "scripts": {
-    "build": "tsc",
-    "watch": "tsc -w",
     "test": "jest",
     "cdk": "cdk"
   },

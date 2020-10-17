@@ -1,6 +1,6 @@
 exports.handler = 
 /**
- * @param {{ path: any; }} event
+ * @param {{ path: string; }} event
  */
  async function(event) {
     console.log("request:", JSON.stringify(event, undefined, 2));

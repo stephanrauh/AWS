@@ -12,6 +12,8 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app. The build ste
  * `cdk synth`            emits the synthesized CloudFormation template
 
 
-`cdk deploy --outputs-file metadata.json`
+`cdk deploy --outputs-file metadata.json --require-approval never`
 
 https://docs.aws.amazon.com/cdk/api/latest/docs/aws-apigateway-readme.html
+
+https://dev.to/dvddpl/create-and-override-apikey-for-an-aws-gatewayapi-bjg

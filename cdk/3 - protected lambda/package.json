@@ -4,20 +4,26 @@
   "bin": {
     "simple-lambda-app": "bin/protected-lambda-app.js"
   },
+  "license": "Apache V2",
+  "repository": {
+    "url": "https://github.com/stephanrauh/AWS"
+  },
   "scripts": {
-    "build": "echo \"The build step is not required when using JavaScript!\" && exit 0",
+    "deploy": "time cdk deploy --require-approval never --outputs-file metadata.json ",
+    "invoke": "sh ./invoke.sh",
     "cdk": "cdk",
     "test": "jest"
   },
   "devDependencies": {
-    "@aws-cdk/assert": "1.65.0",
-    "aws-cdk": "1.65.0",
-    "jest": "^26.4.2"
+    "@aws-cdk/assert": "1.68.0",
+    "aws-cdk": "1.68.0",
+    "jest": "^26.5.3"
   },
   "dependencies": {
-    "@aws-cdk/aws-apigateway": "^1.65.0",
-    "@aws-cdk/aws-lambda": "1.65.0",
-    "@aws-cdk/core": "1.65.0",
-    "@types/jest": "^26.0.14"
+    "@aws-cdk/aws-apigateway": "1.68.0",
+    "@aws-cdk/aws-lambda": "1.68.0",
+    "@aws-cdk/core": "1.68.0",
+    "@types/jest": "^26.0.14",
+    "console": "^0.7.2"
   }
 }

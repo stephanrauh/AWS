@@ -1,0 +1,1 @@
+{"version":"0.1.0","name":"cdk-apigw-lambda-rdsaurora","dependencies":{"aws-cdk-lib":{"version":"2.8.0"},"constructs":{"version":"10.0.39"},"source-map-support":{"version":"0.5.21"}}}

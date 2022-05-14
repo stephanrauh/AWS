@@ -6,6 +6,6 @@ const { InfrastructureStack } = require('../lib/infrastructure-stack');
 const app = new cdk.App();
 new InfrastructureStack(app, 'InfrastructureStack', {
   env: {
-    region: 'eu-central-1',
+    region: 'eu-west-3',
   },
 });

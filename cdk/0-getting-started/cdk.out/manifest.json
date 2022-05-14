@@ -1,0 +1,94 @@
+{
+  "version": "16.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "GettingStartedStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "GettingStartedStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "GettingStartedStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "GettingStartedStack.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/049ec2c50160d57d4379b2f50c51ab8431ac2dd7d9bbab10204e333737aac090.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "GettingStartedStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "GettingStartedStack.assets"
+      ],
+      "metadata": {
+        "/GettingStartedStack/GettingStartedQueue/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GettingStartedQueue206F570A"
+          }
+        ],
+        "/GettingStartedStack/GettingStartedQueue/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GettingStartedQueuePolicy7E256FB9"
+          }
+        ],
+        "/GettingStartedStack/GettingStartedQueue/GettingStartedStackGettingStartedTopic59D3CD17/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GettingStartedQueueGettingStartedStackGettingStartedTopic59D3CD172F60F19E"
+          }
+        ],
+        "/GettingStartedStack/GettingStartedTopic/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GettingStartedTopicFBF495D0"
+          }
+        ],
+        "/GettingStartedStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/GettingStartedStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/GettingStartedStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/GettingStartedStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "GettingStartedStack"
+    }
+  }
+}

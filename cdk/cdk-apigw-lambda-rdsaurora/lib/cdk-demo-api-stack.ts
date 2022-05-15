@@ -20,6 +20,5 @@ export class CdkDemoApiStack extends Stack {
     /* add a resource to the API and a method to the resource */
     const demo = apiDemo.root.addResource('cloudxs_demo');
     demo.addMethod('GET', new apigw.LambdaIntegration(props.lambdaHandler));
-
   }
 }

@@ -11,7 +11,21 @@ export class CdkDemoEc2Stack extends Stack {
 
     /* create a vpc */
     this.vpc = new ec2.Vpc(this, 'cloudxs_vpc', {
-      /* provide an vpc options */
+      cidr: '10.0.0.0/16',
+      natGateways: 1,
+      maxAzs: 2,
+      subnetConfiguration: [
+        {
+          name: 'cdk-public-subnet-1',
+          subnetType: ec2.SubnetType.PUBLIC,
+          cidrMask: 24,
+        },
+        {
+          name: 'cdk-isolated-subnet-1',
+          subnetType: ec2.SubnetType.PRIVATE_WITH_NAT,
+          cidrMask: 28,
+        },
+      ],
     });
     
     /* Secrets Manager Endpoint */
